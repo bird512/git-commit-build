@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+/**
+ * Dependencies.
+ */
+
+var program = require('commander');
+var auto = require('..');
+
+/**
+ * Program.
+ */
+
+program
+  .version('0.0.1')
+  .option('-p, --push', 'Push to remote repository after generating commits')
+  .option('-g, --group', 'Group changes into a single commit')
+  .parse(process.argv);
+  
+/**
+ * Options.
+ */
+
+var opts = {};
+if (program.push) opts.push = true;
+if (program.group) opts.group = true;
+
+/**
+ * Run.
+ */
+
+auto(opts);

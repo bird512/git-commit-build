@@ -1,0 +1,24 @@
+{
+  "name": "git-commit-build",
+  "version": "1.0.0",
+  "author": "Steven Miller",
+  "description": "Tiny script to automate your git workflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bird512/git-commit-build.git"
+  },
+  "keywords": [
+    "git",
+    "git auto",
+    "git-commit-build",
+    "bash"
+  ],
+  "main": "lib/index.js",
+  "dependencies": {
+    "commander": "^2.9.0",
+  },
+  "bin": {
+    "git-commit-build": "bin/git-commit-build"
+  },
+  "license": "MIT"
+}
