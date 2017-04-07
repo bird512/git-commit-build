@@ -6,10 +6,9 @@ function auto(opts){
 	opts.args.forEach(function(arg){
 		addCmd = addCmd+" "+arg;
 	})
-	console.log('addCmd = ',addCmd);
+	console.log('git add command: = ',addCmd);
 	exec(addCmd,status);
 }
-
 
 function status(){
 	var cmd = 'git status -s';
@@ -21,12 +20,12 @@ function status(){
 		lines(output, function(line){
 			var files = line.trim().split(/\s{2}/);
 			if(files[1]){
-				matched.push(files[i])
+				matched.push(files[1])
 			}
 		});
 		if(matched.length > 0){
-			exec("git commit -m 'git-bommit-build'",function(){
-				console.log('commit finish for: ',matched);
+			exec("git commit -m 'git-commit-build'",function(){
+				console.log('commit success with: ',matched);
 			});		
 		}else{
 			console.log('no files need to commit');
@@ -35,8 +34,6 @@ function status(){
 	});	
 	
 }
-
-
       
 /**
  * Pass each output line into a callback.

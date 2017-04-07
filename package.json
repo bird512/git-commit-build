@@ -1,7 +1,7 @@
 {
   "name": "git-commit-build",
-  "version": "1.0.0",
-  "author": "Steven Miller",
+  "version": "1.0.3",
+  "author": "Feng Lei",
   "description": "Tiny script to automate your git workflow",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^2.9.0"
   },
   "bin": {
     "git-commit-build": "bin/git-commit-build"
